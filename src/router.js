@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
+import MainPage from "./router/MainPage.vue";
+import ReadPage from "./router/ReadPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
