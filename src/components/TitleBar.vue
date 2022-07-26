@@ -1,21 +1,28 @@
 <template>
-  <div class="title-bar">
-    <div class="back-button">
-      <button-back>Back</button-back>
-    </div>
-    <div class="switch-theme">
-      <button-theme />
-    </div>
-    <div class="sign-in">
-      <button-signin />
+<transition>
+  <div class="title-wrapper">
+    <router-link to="/main" class="left">
+      <button-back class="icon-back icon" />
+    </router-link>
+    <div class="right">
+      <div class="icon-wrapper">
+        <span class="icon-cart icon"></span>
+      </div>
+      <div class="icon-wrapper">
+        <button-theme class="icon-person icon" />
+      </div>
+      <router-link to="/signin" class="icon-wrapper">
+        <button-signin class="icon-more icon" />
+      </router-link>
     </div>
   </div>
+</transition>
 </template>
 
 <script>
-import ButtonBack from "./button/ButtonSignin.vue";
-import ButtonSignin from "@/button_components/ButtonSignin.vue";
-import ButtonTheme from "@/button_components/ButtonTheme.vue";
+import ButtonBack from "./button/ButtonBack.vue";
+import ButtonSignin from "./button/ButtonSignin.vue";
+import ButtonTheme from "./button/ButtonTheme.vue";
 
 export default {
   components: {
@@ -28,15 +35,5 @@ export default {
 </script>
 
 <style scoped>
-/* .title-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 101;
-  width: 100%;
-  display: flex;
-  height: px2rem(48);
-  background: rgb(179, 127, 127);
-  box-shadow: 0 px2rem(8) px2rem(8) rgba(0, 0, 0, 0.15);
-} */
+
 </style>
