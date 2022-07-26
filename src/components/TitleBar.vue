@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import ButtonBack from "../button_components/ButtonBack.vue";
-import ButtonSignin from "../button_components/ButtonSignin.vue";
+import ButtonBack from "./button/ButtonSignin.vue";
+import ButtonSignin from "@/button_components/ButtonSignin.vue";
 import ButtonTheme from "@/button_components/ButtonTheme.vue";
 
 export default {
