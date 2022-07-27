@@ -1,4 +1,14 @@
 const { defineConfig } = require('@vue/cli-service')
+const { resolve } = require('path')
+
 module.exports = defineConfig({
-  transpileDependencies: true
+  transpileDependencies: true,
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, './src'),
+        '@assets': resolve(__dirname, './assets')
+      }
+    }
+  }
 })
